@@ -20,7 +20,7 @@ spec:
       containers:
         - name: order-service
 
-          image: asia-south1-docker.pkg.dev/project-e85d8801-bd70-4ddd-8bc/microservices-repo/order-service:294
+          image: asia-south1-docker.pkg.dev/project-e85d8801-bd70-4ddd-8bc/microservices-repo/order-service:3
 
           imagePullPolicy: Always
 
