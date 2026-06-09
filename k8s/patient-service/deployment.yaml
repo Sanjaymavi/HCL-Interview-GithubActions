@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: patient-service
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: patient-service
+
+  template:
+    metadata:
+      labels:
+        app: patient-service
+
+    spec:
+      containers:
+        - name: patient-service
+
+          image: asia-south1-docker.pkg.dev/project-e85d8801-bd70-4ddd-8bc/microservices-repo/patient-service:227
+
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 3000

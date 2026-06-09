@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: order-service
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: order-service
+
+  template:
+    metadata:
+      labels:
+        app: order-service
+
+    spec:
+      containers:
+        - name: order-service
+
+          image: asia-south1-docker.pkg.dev/project-e85d8801-bd70-4ddd-8bc/microservices-repo/order-service:294
+
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 8080

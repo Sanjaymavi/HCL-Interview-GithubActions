@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: application-service
+  labels:
+    app: application-service
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: application-service
+
+  template:
+    metadata:
+      labels:
+        app: application-service
+
+    spec:
+      containers:
+        - name: application-service
+
+          image: asia-south1-docker.pkg.dev/project-e85d8801-bd70-4ddd-8bc/microservices-repo/application-service:2235
+
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 3001
