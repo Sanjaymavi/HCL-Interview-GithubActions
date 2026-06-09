@@ -21,7 +21,7 @@ spec:
       containers:
         - name: application-service
 
-          image: asia-south1-docker.pkg.dev/project-e85d8801-bd70-4ddd-8bc/microservices-repo/application-service:2235
+          image: asia-south1-docker.pkg.dev/project-e85d8801-bd70-4ddd-8bc/microservices-repo/application-service:2
 
           imagePullPolicy: Always
 
